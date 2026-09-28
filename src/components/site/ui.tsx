@@ -7,6 +7,8 @@ type ActionProps = {
   variant?: "primary" | "outline" | "ghost";
   className?: string;
   size?: "md" | "lg";
+  target?: string;
+  rel?: string;
 };
 
 const base =
@@ -31,10 +33,14 @@ export function Action({
   variant = "primary",
   size = "md",
   className,
+  target,
+  rel,
 }: ActionProps) {
   return (
     <a
       href={href}
+      target={target}
+      rel={rel}
       className={cn(base, sizes[size], variants[variant], className)}
     >
       {children}
