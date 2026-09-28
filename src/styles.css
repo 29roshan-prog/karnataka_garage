@@ -1,0 +1,247 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Karnataka Garage design system — premium automotive, dark.
+ * Balance: ~70% black / 20% neutral-white / 10% red accent.
+ * All colors in oklch. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 3px;
+
+  --background: oklch(0.13 0 0);
+  --foreground: oklch(1 0 0);
+  --surface: oklch(0.16 0 0);
+  --surface-2: oklch(0.2 0 0);
+  --card: oklch(0.17 0 0);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.17 0 0);
+  --popover-foreground: oklch(1 0 0);
+
+  --primary: oklch(0.556 0.235 28.6);
+  --primary-foreground: oklch(1 0 0);
+
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(1 0 0);
+
+  --muted: oklch(0.2 0 0);
+  --muted-foreground: oklch(0.72 0 0);
+
+  --accent: oklch(0.556 0.235 28.6);
+  --accent-foreground: oklch(1 0 0);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --border-strong: oklch(1 0 0 / 22%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.556 0.235 28.6);
+
+  --shadow-red: 0 18px 50px -20px oklch(0.556 0.235 28.6 / 55%);
+  --overlay-cinematic: linear-gradient(
+    to right,
+    oklch(0.09 0 0 / 72%) 0%,
+    oklch(0.09 0 0 / 40%) 48%,
+    oklch(0.09 0 0 / 5%) 100%
+  );
+  --overlay-bottom: linear-gradient(
+    to top,
+    oklch(0.13 0 0) 0%,
+    oklch(0.13 0 0 / 60%) 30%,
+    transparent 100%
+  );
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+/* ---------- Utilities ---------- */
+
+@utility label-micro {
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-muted-foreground);
+}
+
+@utility display-xl {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+@utility display-lg {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+@utility overlay-cinematic {
+  background-image: var(--overlay-cinematic);
+}
+
+@utility overlay-bottom {
+  background-image: var(--overlay-bottom);
+}
+
+@utility hairline {
+  background-color: var(--color-border);
+}
+
+@utility section-pad {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+  @media (min-width: 768px) {
+    padding-top: 8.5rem;
+    padding-bottom: 8.5rem;
+  }
+}
+
+@utility shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 84rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ---------- Reveal on scroll ---------- */
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+@utility is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes scroll-hint {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@utility animate-scroll-hint {
+  animation: scroll-hint 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@utility animate-slow-zoom {
+  animation: slow-zoom 2.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 32s linear infinite;
+}
