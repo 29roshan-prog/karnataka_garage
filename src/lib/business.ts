@@ -19,10 +19,10 @@ export const business = {
   /* --- Placeholders: replace with real values --- */
   phone: "+919731770033", // e.g. "+919XXXXXXXXX" — leave empty to hide call actions
   whatsapp: "919731770033", // e.g. "919XXXXXXXXX" — leave empty to hide WhatsApp
-  googleProfileUrl: "", // Google Business Profile link
-  googleReviewsUrl: "", // Google reviews link
+  googleProfileUrl: "https://www.google.com/search?q=KARNATAKA+GARAGE+Reviews", // Google Business Profile link
+  googleReviewsUrl: "https://www.google.com/search?q=KARNATAKA+GARAGE+Reviews", // Google reviews link
   directionsUrl: "https://maps.app.goo.gl/1kv3VmeQms1eHjrB9?g_st=ic", // Google Maps directions link
-  mapEmbedUrl: "", // Google Maps embed src
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5959697716827!2d76.23136227452!3d13.316699786751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbad3a3e944e38b%3A0x2e90d33b85c0eab0!2sKarnataka%20Garage!5e0!3m2!1sen!2sin!4v1727521200000!5m2!1sen!2sin", // Google Maps embed src
   openingHours: "", // e.g. "Mon–Sat, 9:00 AM – 6:00 PM"
   siteUrl: "https://karnataka-garage.lovable.app",
 } as const;
@@ -36,6 +36,7 @@ export const whatsappHref = hasWhatsApp
   : "#contact";
 export const directionsHref = business.directionsUrl || "#location";
 export const googleHref = business.googleProfileUrl || "#reviews";
+export const googleReviewsHref = business.googleReviewsUrl || business.googleProfileUrl || "#reviews";
 
 export const navLinks = [
   { label: "Home", href: "#top" },
