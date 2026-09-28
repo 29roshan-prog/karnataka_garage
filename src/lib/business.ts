@@ -9,19 +9,19 @@ export const business = {
   name: "Karnataka Garage",
   category: "Car Repair & Services",
   locality: "Jajur",
-  city: "Hassan",
+  city: "Arsikere",
   region: "Karnataka",
   country: "India",
-  addressLine: "Jajur, Hassan, Karnataka, India",
+  addressLine: "Jajur, Arsikere, Karnataka, India",
   rating: "5.0",
   ratingCount: 110,
 
   /* --- Placeholders: replace with real values --- */
-  phone: "", // e.g. "+919XXXXXXXXX" — leave empty to hide call actions
-  whatsapp: "", // e.g. "919XXXXXXXXX" — leave empty to hide WhatsApp
+  phone: "+919731770033", // e.g. "+919XXXXXXXXX" — leave empty to hide call actions
+  whatsapp: "919731770033", // e.g. "919XXXXXXXXX" — leave empty to hide WhatsApp
   googleProfileUrl: "", // Google Business Profile link
   googleReviewsUrl: "", // Google reviews link
-  directionsUrl: "", // Google Maps directions link
+  directionsUrl: "https://maps.app.goo.gl/1kv3VmeQms1eHjrB9?g_st=ic", // Google Maps directions link
   mapEmbedUrl: "", // Google Maps embed src
   openingHours: "", // e.g. "Mon–Sat, 9:00 AM – 6:00 PM"
   siteUrl: "https://karnataka-garage.lovable.app",
@@ -77,6 +77,11 @@ export const services = [
     no: "06",
     title: "Denting & Painting",
     copy: "Bodywork attention that restores the finish of your vehicle.",
+  },
+  {
+    no: "07",
+    title: "Accidental Repairs",
+    copy: "Expert repair work after accidents — restoring your vehicle's safety and appearance.",
   },
 ];
 

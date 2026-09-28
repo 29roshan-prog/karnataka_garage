@@ -16,9 +16,9 @@ import { Footer } from "@/components/site/Footer";
 import { MobileBar } from "@/components/site/MobileBar";
 import { business } from "@/lib/business";
 
-const title = "Karnataka Garage | Car Repair & Services in Jajur, Hassan";
+const title = "Karnataka Garage | Car Repair & Services in Jajur, Arsikere";
 const description =
-  "Karnataka Garage in Jajur, Hassan — professional car repair and maintenance focused on reliable workmanship and dependable vehicle care. Rated 5.0 from 110+ ratings.";
+  "Karnataka Garage in Jajur, Arsikere — professional car repair and maintenance focused on reliable workmanship and dependable vehicle care. Rated 5.0 from 110+ ratings.";
 
 /** LocalBusiness data — only verified fields are included. */
 const structuredData = {
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "Karnataka Garage, car repair Hassan, car service Hassan, car garage Jajur, automotive garage Karnataka",
+          "Karnataka Garage, car repair Arsikere, car service Arsikere, car garage Jajur, automotive garage Karnataka",
       },
       { property: "og:title", content: title },
       { property: "og:description", content: description },

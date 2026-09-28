@@ -6,12 +6,13 @@ import {
   Snowflake,
   CircuitBoard,
   SprayCan,
+  ShieldAlert,
 } from "lucide-react";
 import { services } from "@/lib/business";
 import { useReveal } from "@/hooks/use-reveal";
-import { Placeholder, SectionHeading, SectionLabel } from "./ui";
+import { SectionHeading, SectionLabel } from "./ui";
 
-const icons = [Wrench, Cog, Disc3, Snowflake, CircuitBoard, SprayCan] as const;
+const icons = [Wrench, Cog, Disc3, Snowflake, CircuitBoard, SprayCan, ShieldAlert] as const;
 
 export function Services() {
   const ref = useReveal<HTMLDivElement>();
@@ -33,10 +34,6 @@ export function Services() {
             positioned as a dependable destination for keeping your vehicle
             road-ready.
           </p>
-        </div>
-
-        <div className="mt-6">
-          <Placeholder>Service list awaiting confirmation</Placeholder>
         </div>
 
         <div className="mt-12 grid border-t border-border sm:grid-cols-2 lg:grid-cols-3">

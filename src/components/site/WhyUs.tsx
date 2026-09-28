@@ -17,7 +17,7 @@ export function WhyUs() {
           </SectionHeading>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
             How we approach every vehicle that comes through the workshop in
-            Jajur, Hassan.
+            Jajur, Arsikere.
           </p>
         </div>
 

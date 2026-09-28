@@ -77,22 +77,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Karnataka Garage | Car Repair & Services, Jajur, Hassan" },
+      { title: "Karnataka Garage | Car Repair & Services, Jajur, Arsikere" },
       {
         name: "description",
         content:
-          "Professional car repair and maintenance at Karnataka Garage, Jajur, Hassan, Karnataka.",
+          "Professional car repair and maintenance at Karnataka Garage, Jajur, Arsikere, Karnataka.",
       },
       { name: "author", content: "Karnataka Garage" },
       { name: "theme-color", content: "#0a0a0a" },
       {
         property: "og:title",
-        content: "Karnataka Garage | Car Repair & Services, Jajur, Hassan",
+        content: "Karnataka Garage | Car Repair & Services, Jajur, Arsikere",
       },
       {
         property: "og:description",
         content:
-          "Professional car repair and maintenance at Karnataka Garage, Jajur, Hassan, Karnataka.",
+          "Professional car repair and maintenance at Karnataka Garage, Jajur, Arsikere, Karnataka.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
