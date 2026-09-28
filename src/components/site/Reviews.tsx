@@ -1,5 +1,5 @@
 import { Star, ArrowUpRight, Quote } from "lucide-react";
-import { business, reviews, googleHref } from "@/lib/business";
+import { business, reviews, googleHref, googleReviewsHref } from "@/lib/business";
 import { useReveal } from "@/hooks/use-reveal";
 import { Action, Placeholder, SectionHeading, SectionLabel } from "./ui";
 
@@ -77,7 +77,7 @@ export function Reviews() {
         )}
 
         <div className="reveal mt-10">
-          <Action href={googleHref} variant="outline" size="lg">
+          <Action href={googleReviewsHref} variant="outline" size="lg" target="_blank" rel="noopener noreferrer">
             View all reviews
             <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </Action>
