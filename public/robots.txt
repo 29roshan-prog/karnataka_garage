@@ -1,4 +1,5 @@
+
 User-agent: *
 Allow: /
 
-Sitemap: https://karnataka-garage.lovable.app/sitemap.xml
+Sitemap: https://karnatakagarage.netlify.app/sitemap.xml
